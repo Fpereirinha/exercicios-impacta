@@ -1,3 +1,2 @@
-x = int(input())
-for c, x in enumerate(range(65, x+65)):
+for c, x in enumerate(range(65, int(input())+65)):
     print(chr(x)*(c+1))
