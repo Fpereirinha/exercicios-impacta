@@ -1,7 +1,7 @@
 def exibir(lista):
     lista.sort()
     for cont, c in enumerate(lista):
-        if cont == len(x) - 1:
+        if cont == len(lista) - 1:
             print(c)
         else:
             print(c, end=' ')
