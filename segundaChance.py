@@ -15,10 +15,10 @@ for c, item in enumerate(l1):
 print(f'NOTAS ALTERADAS: {dif}')
 for c, item in enumerate(l1):
     if item == 10 or l2[c] < 10:
-        print(f'-({c+1:0>3}) original: {item:0>4}0 | final: {item:0>4}0')
+        print(f'-({c+1:0>3}) original: {item:05.2f} | final: {item:05.2f}')
     else:
         if l2[c] == 10:
             if item+2 >= 10:
-                print(f'({c+1:0>3}) original: {item:0>4}0 | final: 10.00')
+                print(f'*({c+1:0>3}) original: {item:05.2f} | final: 10.00')
             else:
-                print(f'*({c+1:0>3}) original: {item:0>4}0 | final: {item+2:0>4}0')
+                print(f'*({c+1:0>3}) original: {item:05.2f} | final: {item+2:05.2f}')
