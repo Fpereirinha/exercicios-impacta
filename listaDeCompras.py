@@ -6,7 +6,6 @@ def exibir(lista):
         else:
             print(c, end=' ')
 x = list(map(int, input().split()))
-opc = 0
 while True:
     opc = input().split()
     if opc[0] == 'exibir' or opc[0] == "encerrar":
