@@ -1,10 +1,5 @@
 def exibir(lista):
-    lista.sort()
-    for cont, c in enumerate(lista):
-        if cont == len(lista) - 1:
-            print(c)
-        else:
-            print(c, end=' ')
+    print(""' '.join(map(str,lista.sort())))
 x = list(map(int, input().split()))
 while True:
     opc = input().split()
