@@ -1,5 +1,6 @@
 def exibir(lista):
-    print(""' '.join(map(str,lista.sort())))
+    lista.sort()
+    print(""' '.join(map(str,lista)))
 x = list(map(int, input().split()))
 while True:
     opc = input().split()
