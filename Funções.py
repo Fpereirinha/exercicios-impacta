@@ -1,3 +1,5 @@
+# importação necessaria #
+from collections import defaultdict
 def eh_primo(n):
     if n >= 2:
         mult = 0
