@@ -1,20 +1,18 @@
-# importação necessaria #
-from collections import defaultdict
 def eh_primo(n):
     if n >= 2:
-        mult = 0
         for c in range(2, n):
             if n % c == 0:
-                mult += 1
-        return mult == 0
+                return False
+        return True
     else:
         raise ValueError('Número deve ser maior ou igual a 2.')
 
 def conta_primos(s):
-    lista = defaultdict(int)
+    lista = dict()
     for item in s:
         if eh_primo(item):
-            lista[item] += 1
+            atual = lista.get(item, 0)
+            lista[item] = atual + 1
     return dict(lista)
 
 
@@ -68,7 +66,7 @@ def eh_perfeito(n):
         raise ValueError('Numero deve ser maior ou igual a 2 !')
     return sum(divisores) == n
 
-def lista_perfeito(n):
+def lista_perfeitos(n):
     if n >= 2:
         lista = [numero for numero in range(2,n) if eh_perfeito(numero)]
     else:
