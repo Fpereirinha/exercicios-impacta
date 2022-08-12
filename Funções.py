@@ -15,8 +15,6 @@ def conta_primos(s):
             lista[item] = atual + 1
     return dict(lista)
 
-
-
 def lista_primos(n):
     lista = []
     if n >= 2:
