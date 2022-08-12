@@ -16,13 +16,8 @@ def conta_primos(s):
     return dict(lista)
 
 def lista_primos(n):
-    lista = []
-    if n >= 2:
-        for numero in range(2, n):
-            if eh_primo(numero):
-                lista.append(numero)
-    else:
-        raise ValueError('O número deve ser maior ou igual a 2.')
+    if n < 2 : return []
+    lista = [numero for numero in range(2, n) if eh_primo(numero)]
     return sorted(lista)
 
 def eh_armstrong(n):
