@@ -46,7 +46,7 @@ class Conta:
 
     def transferir(self, conta_destino, valor):
         if self.__ativa and conta_destino.ativa:
-            if self.__saldo > valor:
+            if self.__saldo > valor > 0:
                 self.__saldo -= valor
                 conta_destino.depositar(valor)
                 self.__operacoes.append(('transferencia', valor))
