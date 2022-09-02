@@ -1,4 +1,3 @@
-
 class Conta:
 
     def __init__(self, titular, agencia, numero, saldo_inicial):
@@ -35,25 +34,21 @@ class Conta:
             self.__ativa = situacao
 
     def depositar(self, valor):
-        if self.__ativa and valor > 0:
+        if self.ativa and valor > 0:
             self.__saldo += valor
             self.__operacoes.append(('deposito', valor))
 
     def sacar(self, valor):
-        if self.__ativa and 0 < valor < self.__saldo:
+        if self.ativa and 0 < valor <= self.saldo:
             self.__saldo -= valor
             self.__operacoes.append(('saque', valor))
 
     def transferir(self, conta_destino, valor):
-        if self.__ativa and conta_destino.ativa:
-            if self.__saldo > valor > 0:
+        if self.ativa and conta_destino.ativa:
+            if self.saldo >= valor > 0:
                 self.__saldo -= valor
                 conta_destino.depositar(valor)
                 self.__operacoes.append(('transferencia', valor))
 
     def tirar_extrato(self):
         return self.__operacoes
-
-
-
-
